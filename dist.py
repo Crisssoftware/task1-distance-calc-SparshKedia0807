@@ -13,7 +13,7 @@ class DistancePublisher(Node):
             self.pose_callback,
             10
         )
-        self.publisher = self.create_publisher(Float32, '/turtle1/distance', 10)
+        self.publisher = self.create_publisher(Float32, '/turtle1/distance_from_origin', 10)
         self.timer = self.create_timer(0.1, self.publish_distance)
         self.current_pose = None
 
